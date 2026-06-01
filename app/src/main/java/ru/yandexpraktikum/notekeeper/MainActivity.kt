@@ -24,9 +24,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val navController = rememberNavController()
-                    val container = (LocalContext.current.applicationContext as NoteKeeperApp).container
+                    val appComponent = (LocalContext.current.applicationContext as NoteKeeperApp).appComponent
                     NoteKeeperNavHost(
-                        appContainer = container,
+                        appComponent = appComponent,
                         navController = navController
                     )
                 }
